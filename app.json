@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/home/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#282828",
+    "navigationBarTitleText": "卖座网-非官方",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  }
+}
