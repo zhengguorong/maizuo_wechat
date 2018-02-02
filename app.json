@@ -2,7 +2,9 @@
   "pages": [
     "pages/film/index",
     "pages/film/detail",
-    "pages/film/list"
+    "pages/film/list",
+    "pages/member/index",
+    "pages/cinema/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
