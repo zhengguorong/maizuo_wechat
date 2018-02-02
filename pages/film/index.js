@@ -41,6 +41,7 @@ Page({
       this.setData({ playingFilms: data.films })
     })
   },
+  // 获取即将上映电影列表
   getComingFilm: function () {
     filmServer.getComingSoon(1, 5).then(data => {
       let films = data.films.map((film) => {

@@ -23,7 +23,15 @@ Page({
   },
   getDetail: function (id) {
     filmServer.getFilmDetail(id).then(data => {
+      let premiereAt = new Date(data.film.premiereAt).getMonth() + 1 + '月' + new Date(data.film.premiereAt).getDate() + '日'
+      data.film.displayPremiereAt = premiereAt
       this.setData({film: data.film})
+    })
+  },
+  buy: function () {
+    wx.showModal({
+      title: '提示',
+      content: '购买功能还没开发'
     })
   }
 })

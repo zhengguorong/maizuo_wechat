@@ -1,1 +1,30 @@
-<image></image>
+<image class="film-image" src='{{film.cover.origin}}'></image>
+<view class='info-container'>
+  <view class="title">影片简介</view>
+  <view class="info">
+    <text>导演：</text>
+    <text>{{film.director}}</text>
+  </view>
+  <view class="info">
+    <text>主演：</text>
+    <text wx:for="{{film.actors}}" wx:key="{{index}}">{{item.name}} | </text>
+  </view>
+  <view class="info">
+    <text>地区语言：</text>
+    <text>{{film.nation}}({{film.language}})</text>
+  </view>
+  <view class="info">
+    <text>类型：</text>
+    <text>{{film.category}}</text>
+  </view>
+  <view class="info">
+    <text>上映日期：</text>
+    <text>{{film.displayPremiereAt}}上映</text>
+  </view>
+  <view class="info">
+    <text>{{film.synopsis}}</text>
+  </view>
+</view>
+<view class='buy-now'>
+  <button bindtap='buy'>立即购票</button>
+</view>

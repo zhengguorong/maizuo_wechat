@@ -1,0 +1,69 @@
+/* pages/film/list.wxss */
+
+page {
+  background: #f9f9f9;
+}
+
+.list {
+  height: 100vh;
+}
+
+.film {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 30rpx 40rpx;
+  padding-bottom: 30rpx;
+  height: 170rpx;
+  border-bottom: dashed 1px #c9c9c9;
+}
+
+.coming {
+  justify-content: flex-start;
+}
+
+.film-image {
+  width: 120rpx;
+}
+
+.film-image image {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  margin-left: 30rpx;
+}
+
+.name {
+  font-size: 32rpx;
+  line-height: 64rpx;
+}
+
+.intro {
+  color: #8e8e8e;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  height: 48rpx;
+}
+
+.film-counts {
+  color: #8e8e8e;
+  font-size: 24rpx;
+  line-height: 48rpx;
+}
+
+.blueFont {
+  color: #8aa2bf;
+}
+
+.orangeFont {
+  color: #ffb375;
+}
+
+
+.grade {
+  font-size: 32rpx;
+  color: #fc7103;
+  line-height: 64rpx;
+}

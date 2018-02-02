@@ -1,0 +1,33 @@
+<scroll-view bindscrolltolower='loadMore' class="list" scroll-y>
+  <navigator wx:if='{{playingFilms.length !== 0 }}' wx:for='{{playingFilms}}' wx:key='{{index}}' class='film' url="/pages/film/detail?id={{item.id}}">
+    <view class='film-image'>
+      <image src='{{item.poster.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
+    </view>
+    <view class='info'>
+      <view class='name'>{{item.name}}</view>
+      <view class='intro'>{{item.intro}}</view>
+      <view class='film-counts'>
+        <text class='blueFont'>{{item.cinemaCount}}</text>
+        <text>家影院上映</text>
+        <text class='blueFont' style='margin-left: 60rpx;'>{{item.watchCount}}</text>
+        <text>人购票</text>
+      </view>
+    </view>
+    <view class='grade'>
+      {{item.grade}}
+    </view>
+  </navigator>
+
+  <navigator wx:if='{{comingFilms.length !== 0 }}' wx:for='{{comingFilms}}' wx:key='{{index}}' class='film coming' url="/pages/film/detail?id={{item.id}}">
+    <view class='film-image'>
+      <image src='{{item.poster.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
+    </view>
+    <view class='info'>
+      <view class='name'>{{item.name}}</view>
+      <view class='intro'>{{item.intro}}</view>
+      <view class='film-counts'>
+        <text class='orangeFont'>{{item.displayDate}}上映</text>
+      </view>
+    </view>
+  </navigator>
+</scroll-view>

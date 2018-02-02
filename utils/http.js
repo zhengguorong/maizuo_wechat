@@ -3,6 +3,7 @@ var Promise = require('../libs/es6-promise.js').Promise
 function get(url, data) {
   const requestUrl = buildUrl(url, data)
   return new Promise((resolve, reject) => {
+    wx.showLoading({ title: '加载中' })
     wx.request({
       url: requestUrl,
       header: {
@@ -10,9 +11,11 @@ function get(url, data) {
       },
       method: 'GET',
       success: res => {
+        wx.hideLoading()
         resolve(res.data)
       },
       fail: res => {
+        wx.hideLoading()
         reject(res)
       }
     })
@@ -22,6 +25,7 @@ function get(url, data) {
 function post(url, data) {
   const requestUrl = buildUrl(url)
   return new Promise((resolve, reject) => {
+    wx.showLoading({title: '加载中'})
     wx.request({
       url: requestUrl,
       header: {
@@ -30,9 +34,11 @@ function post(url, data) {
       data: data,
       method: 'POST',
       success: res => {
+        wx.hideLoading()
         resolve(res)
       },
       fail: res => {
+        wx.hideLoading()
         reject(res)
       }
     })

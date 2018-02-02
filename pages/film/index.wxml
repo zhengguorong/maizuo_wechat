@@ -9,7 +9,7 @@
 <!-- 热映电影列表  -->
 <view class='playing-container'>
   <view class='playing-item' wx:for='{{playingFilms}}' wx:key='{{index}}'>
-    <navigator url="/pages/film/detail?id={{item.id}}" hover-class="navigator-hover">
+    <navigator url="/pages/film/detail?id={{item.id}}">
       <image class="film-image" src='{{item.cover.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
       <view class='info-container'>
         <view>
@@ -22,7 +22,10 @@
       </view>
     </navigator>
   </view>
-  <view class='more'>更多热映电影</view>
+  <navigator url="/pages/film/list?type=playing">
+    <view class='more'>更多热映电影</view>
+  </navigator>
+
 </view>
 <!-- 分割线  -->
 <view class='split-line'>
@@ -41,7 +44,9 @@
           <text>{{item.displayDate}}</text>
         </view>
       </view>
-      </navigator>
+    </navigator>
   </view>
-  <view class='more'>更多即将上映电影</view>
+  <navigator url="/pages/film/list?type=coming" hover-class="navigator-hover">
+    <view class='more'>更多即将上映电影</view>
+  </navigator>
 </view>
