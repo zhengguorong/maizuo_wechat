@@ -23,13 +23,13 @@
         "selectedIconPath": "img/film_selected.png"
       },
       {
-        "pagePath": "pages/film/index",
+        "pagePath": "pages/cinema/index",
         "text": "影院",
         "iconPath": "img/cinema.png",
         "selectedIconPath": "img/cinema_selected.png"
       },
       {
-        "pagePath": "pages/film/index",
+        "pagePath": "pages/member/index",
         "text": "我的",
         "iconPath": "img/member.png",
         "selectedIconPath": "img/member_selected.png"
