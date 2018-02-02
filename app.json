@@ -1,12 +1,36 @@
 {
-  "pages":[
-    "pages/home/index"
+  "pages": [
+    "pages/film/index",
+    "pages/film/detail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#282828",
     "navigationBarTitleText": "卖座网-非官方",
-    "navigationBarTextStyle":"white",
+    "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#d4237a",
+    "list": [
+      {
+        "pagePath": "pages/film/index",
+        "text": "电影",
+        "iconPath": "img/film.png",
+        "selectedIconPath": "img/film_selected.png"
+      },
+      {
+        "pagePath": "pages/film/index",
+        "text": "影院",
+        "iconPath": "img/cinema.png",
+        "selectedIconPath": "img/cinema_selected.png"
+      },
+      {
+        "pagePath": "pages/film/index",
+        "text": "我的",
+        "iconPath": "img/member.png",
+        "selectedIconPath": "img/member_selected.png"
+      }
+    ]
   }
 }

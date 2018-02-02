@@ -1,4 +1,4 @@
-const postServer = require('../../server/info.js')
+const infoServer = require('../../server/info.js')
 const filmServer = require('../../server/film.js')
 
 // pages/index/index.js
@@ -29,8 +29,10 @@ Page({
   },
   // 获取滚动广告
   getBanner: function () {
-    postServer.getHomeBanner().then(data => {
+    infoServer.getHomeBanner().then(data => {
       this.setData({ imgUrls: data.billboards })
+    }).catch(e => {
+      console.log(e)
     })
   },
   // 获取正在热映电影列表

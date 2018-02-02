@@ -10,5 +10,6 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.1",
 	"appid": "touristappid",
-	"projectname": "maizuo"
+	"projectname": "maizuo",
+	"condition": {}
 }

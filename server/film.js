@@ -27,7 +27,21 @@ const getComingSoon = (page, count) => {
   })
 }
 
+// 获取电影详情
+const getFilmDetail = (id) => {
+  return new Promise((resolve, reject) => {
+    http.get('/film/' + id, { __t: new Date().getTime() }).then(result => {
+      if (result.status === 0) {
+        resolve(result.data)
+      } else {
+        reject(result)
+      }
+    })
+  })
+}
+
 module.exports = {
   getNowPlaying,
-  getComingSoon
+  getComingSoon,
+  getFilmDetail
 }
