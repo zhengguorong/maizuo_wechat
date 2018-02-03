@@ -8,7 +8,6 @@ page {
   border-bottom: 0rpx;
 }
 .title {
-  width: 100%;
   line-height: 80rpx;
   background: #e1e1e1;
   font-size: 28rpx;

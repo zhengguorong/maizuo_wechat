@@ -3,7 +3,7 @@
     {{item.district}}
   </view>
   <view class='content' wx:if="{{tabIndex === index}}">
-    <view class='cinema' wx:for="{{item.cinemas}}" wx:for-item="cinema">
+    <view class='cinema' wx:for="{{item.cinemas}}" wx:for-item="cinema" wx:key="{{index}}">
       <view class='name'>{{cinema.name}}</view>
       <view class='address'>{{cinema.address}}</view>
       <view class='distance'>距离10km</view>
