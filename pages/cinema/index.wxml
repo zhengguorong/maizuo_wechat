@@ -1,3 +1,12 @@
-<view wx:for="{{cinemas}}">
-{{item.district}}
+<view class='item' wx:for="{{cinemas}}" wx:key="{{index}}">
+  <view class='title' bindtap='selectedTab'  data-index="{{index}}">
+    {{item.district}}
+  </view>
+  <view class='content' wx:if="{{tabIndex === index}}">
+    <view class='cinema' wx:for="{{item.cinemas}}" wx:for-item="cinema">
+      <view class='name'>{{cinema.name}}</view>
+      <view class='address'>{{cinema.address}}</view>
+      <view class='distance'>距离10km</view>
+    </view>
+  </view>
 </view>

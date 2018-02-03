@@ -1,1 +1,37 @@
-/* pages/cinema/index.wxss */
+page {
+  background: #ebebeb;
+}
+.item {
+  border-bottom: 3rpx solid #fff;
+}
+.item:last-child {
+  border-bottom: 0rpx;
+}
+.title {
+  width: 100%;
+  line-height: 80rpx;
+  background: #e1e1e1;
+  font-size: 28rpx;
+  padding-left: 32rpx;
+}
+.content {
+  background: #fff;
+}
+.cinema {
+  padding: 40rpx;
+  border-bottom: 2rpx solid #e1e1e1;
+}
+.cinema:last-child {
+  border-bottom: 0rpx;
+}
+.name {
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.address,.distance {
+  color: #ccc;
+  font-size: 24rpx;
+}
+.distance {
+  margin-top: 10rpx;
+}

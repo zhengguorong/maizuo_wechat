@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cinemas:[]
+    cinemas:[],
+    tabIndex: 0
   },
   /**
    * 生命周期函数--监听页面加载
@@ -18,7 +19,15 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.onLoad()
+  },
+  selectedTab: function (event) {
+    let index = event.currentTarget.dataset.index
+    if (this.data.tabIndex === index) {
+      this.setData({ tabIndex: -1 })
+    } else {
+      this.setData({ tabIndex: index })
+    }
   },
   getCinemas: function () {
     cinemaServer.getCinema().then(data => {
@@ -31,7 +40,6 @@ Page({
         })
         if (index === -1) {
           cinemas.push({ district: district, cinemas: [cinema]})
-          console.log(cinemas)
         } else {
           cinemas[index].cinemas.push(cinema)
         }
