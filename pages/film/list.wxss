@@ -11,7 +11,7 @@ page {
 .film {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 30rpx 40rpx;
   padding-bottom: 30rpx;
   height: 170rpx;
