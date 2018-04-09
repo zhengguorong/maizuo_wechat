@@ -1,5 +1,3 @@
-var Promise = require('../libs/es6-promise.js').Promise
-
 function get(url, data) {
   const requestUrl = buildUrl(url, data)
   return new Promise((resolve, reject) => {
