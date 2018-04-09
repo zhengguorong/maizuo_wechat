@@ -1,5 +1,4 @@
 var http = require("../utils/http.js")
-var Promise = require('../libs/es6-promise.js').Promise
 
 const getHomeBanner = () => {
   return new Promise((resolve, reject) => {

@@ -33,6 +33,7 @@ page {
 
 .info {
   margin-left: 30rpx;
+  width: 500rpx;
 }
 
 .name {
@@ -45,6 +46,7 @@ page {
   font-size: 24rpx;
   line-height: 48rpx;
   height: 48rpx;
+  overflow: hidden;
 }
 
 .film-counts {

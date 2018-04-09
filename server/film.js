@@ -1,5 +1,4 @@
 var http = require("../utils/http.js")
-var Promise = require('../libs/es6-promise.js').Promise
 
 // 获取正在热映电影接口
 const getNowPlaying = (page, count) => {
