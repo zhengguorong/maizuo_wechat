@@ -3,7 +3,7 @@ const filmServer = require('../../server/film.js')
 
 // pages/index/index.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */

@@ -1,0 +1,27 @@
+{
+  "name": "maizuo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": ["libs"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengguorong/maizuo_wechat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhengguorong/maizuo_wechat/issues"
+  },
+  "homepage": "https://github.com/zhengguorong/maizuo_wechat#readme",
+  "dependencies": {
+    "jest": "^22.4.3"
+  }
+}
