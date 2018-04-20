@@ -1,0 +1,5 @@
+<template name="helloworld">
+  <view>
+    <text>{{msg}}</text>
+  </view>
+</template>

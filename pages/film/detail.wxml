@@ -26,5 +26,5 @@
   </view>
 </view>
 <view class='buy-now'>
-  <button bindtap='buy'>立即购票</button>
+  <button bindtap='buy' animation="{{scaleAnim}}">立即购票</button>
 </view>

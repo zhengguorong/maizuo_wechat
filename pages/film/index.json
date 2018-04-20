@@ -1,3 +1,6 @@
 {
-  "backgroundColor": "#ebebeb"
+  "backgroundColor": "#ebebeb",
+  "usingComponents": {
+    "Toast": "/components/Toast"
+  }
 }

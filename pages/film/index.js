@@ -56,5 +56,9 @@ Page({
       title: '提示',
       content: '因打开webview控件需要加入白名单，这里就不做跳转了'
     })
+  },
+  showToast: function () {
+    this.Toast = this.selectComponent("#Toast");
+    this.Toast.show('调用toast成功', 2000)
   }
 })

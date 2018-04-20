@@ -1,0 +1,7 @@
+<!--components/Toast.wxml-->
+<view class='toast-container' wx:if="{{isShow}}">
+  <view class="toast-wrap">
+    <slot></slot>
+    <text class="toast-text">{{context}}</text>
+  </view>
+</view>

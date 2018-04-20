@@ -1,4 +1,6 @@
 const filmServer = require('../../server/film.js')
+const Animation = require('../../utils/animation')
+
 // pages/film/detail.js
 Page({
 
@@ -6,14 +8,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    film: {}
+    film: {},
+    scaleAnim: {}
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.getDetail(options.id)
+
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
@@ -29,6 +32,10 @@ Page({
     })
   },
   buy: function () {
+    let scaleAnim = Animation.scaleAnim()
+    this.setData({
+      scaleAnim: scaleAnim.export()
+    })
     wx.showModal({
       title: '提示',
       content: '购买功能还没开发'
