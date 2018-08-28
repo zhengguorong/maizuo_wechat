@@ -3,23 +3,34 @@ const filmServer = require('../../server/film.js')
 
 // pages/index/index.js
 Page({
-  
   /**
    * 页面的初始数据
    */
   data: {
     imgUrls: [],
     playingFilms: [],
-    comingFilms: []
+    comingFilms: [],
+    startTime: '',
+    endTime: ''
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(this)
+    // setInterval(() => {
+    //   var updateData = JSON.stringify(this.data)
+    //   var updateDataTotal = (updateData.length / 1024).toFixed(1)
+    //   console.log('这次操作引发500ms内数据更新量:' + updateDataTotal + 'kb')
+    // }, 500)
+    // console.log(this.setData)
     this.getBanner()
     this.getPlayingFilm()
     this.getComingFilm()
+    this.startTime = new Date().getTime()
+  },
+  onReady: function () {
+
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作

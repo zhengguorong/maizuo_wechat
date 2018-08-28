@@ -16,7 +16,6 @@ Page({
    */
   onLoad: function (options) {
     this.getDetail(options.id)
-
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
@@ -32,6 +31,7 @@ Page({
     })
   },
   buy: function () {
+    throw new Error('error')
     let scaleAnim = Animation.scaleAnim()
     this.setData({
       scaleAnim: scaleAnim.export()
