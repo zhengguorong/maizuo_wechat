@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.1",
+	"libVersion": "2.2.0",
 	"appid": "wx8bc5d288383a85c9",
 	"projectname": "maizuo",
 	"condition": {}
