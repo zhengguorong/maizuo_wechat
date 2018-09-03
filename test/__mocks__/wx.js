@@ -26,7 +26,7 @@ global.Page = ({ data, ...rest }) => {
 
     page.onLoad()
     page.onReady()
-
+    global.wxPage = page
     return page
 }
 

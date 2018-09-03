@@ -10,8 +10,6 @@ Page({
     imgUrls: [],
     playingFilms: [],
     comingFilms: [],
-    startTime: '',
-    endTime: ''
   },
   /**
    * 生命周期函数--监听页面加载
@@ -20,7 +18,7 @@ Page({
     this.getBanner()
     this.getPlayingFilm()
     this.getComingFilm()
-    this.startTime = new Date().getTime()
+    this.setTest()
   },
   onReady: function () {
 
@@ -61,8 +59,7 @@ Page({
       content: '因打开webview控件需要加入白名单，这里就不做跳转了'
     })
   },
-  showToast: function () {
-    this.Toast = this.selectComponent("#Toast");
-    this.Toast.show('调用toast成功', 2000)
+  setTest() {
+    this.setData({test: true})
   }
 })

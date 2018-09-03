@@ -14,7 +14,7 @@
       "./test/utils.js"
     ],
     "testEnvironment": "node",
-    "setupFiles": ["./test/mock/wx.js"]
+    "setupFiles": ["./test/__mocks__/wx.js"]
   },
   "repository": {
     "type": "git",

@@ -49,8 +49,4 @@
   <navigator url="/pages/film/list?type=coming" hover-class="navigator-hover">
     <view class='more'>更多即将上映电影</view>
   </navigator>
-    <view bindtap='showToast'>click to show toast</view>
 </view>
-<Toast id='Toast'></Toast>
-<import src="/templates/helloworld"/>
-<template is="helloworld" data="{{msg: 'include from template'}}"/>

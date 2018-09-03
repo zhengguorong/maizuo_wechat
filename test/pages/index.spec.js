@@ -1,6 +1,10 @@
 import index from '../../pages/film/index.js'
+
+var page = global.wxPage
+
+
 describe("电影首页", () => {
-  it('page对象', () => {
-    console.log(index, 'index')
+  it("getPlayingFilm", ()=>{
+    expect(page.getPlayingFilm)
   })
 })
