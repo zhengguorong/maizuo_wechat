@@ -81,3 +81,7 @@ global.getApp = function () {
     baseUrl: 'https://m.maizuo.com/v4/api'
   }
 }
+
+global.wx = {
+    showModal: jest.fn()
+}

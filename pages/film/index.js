@@ -18,7 +18,6 @@ Page({
     this.getBanner()
     this.getPlayingFilm()
     this.getComingFilm()
-    this.setTest()
   },
   onReady: function () {
 
@@ -58,8 +57,5 @@ Page({
       title: '提示',
       content: '因打开webview控件需要加入白名单，这里就不做跳转了'
     })
-  },
-  setTest() {
-    this.setData({test: true})
   }
 })

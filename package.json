@@ -14,6 +14,7 @@
       "./test/utils.js"
     ],
     "testEnvironment": "node",
+    "automock": false,
     "setupFiles": ["./test/__mocks__/wx.js"]
   },
   "repository": {

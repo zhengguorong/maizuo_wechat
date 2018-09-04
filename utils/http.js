@@ -84,5 +84,6 @@ function buildUrl(url, data) {
 module.exports = {
   get: get,
   post: post,
-  uploadFile: uploadFile
+  uploadFile: uploadFile,
+  buildUrl: buildUrl
 }
