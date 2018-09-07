@@ -31,7 +31,6 @@ Page({
     })
   },
   buy: function () {
-    throw new Error('error')
     let scaleAnim = Animation.scaleAnim()
     this.setData({
       scaleAnim: scaleAnim.export()

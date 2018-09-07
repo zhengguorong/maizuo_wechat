@@ -19,9 +19,6 @@ Page({
     this.getPlayingFilm()
     this.getComingFilm()
   },
-  onReady: function () {
-
-  },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
@@ -32,8 +29,6 @@ Page({
   getBanner: function () {
     infoServer.getHomeBanner().then(data => {
       this.setData({ imgUrls: data.billboards })
-    }).catch(e => {
-      console.log(e)
     })
   },
   // 获取正在热映电影列表
