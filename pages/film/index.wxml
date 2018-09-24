@@ -1,1 +1,52 @@
-<image src="http://test-10019075.cossh.myqcloud.com/WechatIMG179.jpg"></image>
+<!-- banner广告  -->
+<swiper class='banner' autoplay="{{true}}" indicator-dots="true">
+  <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
+    <swiper-item bindtap="toBannerDetail">
+      <image src='{{item.imageUrl}}' class='slide-image' />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 热映电影列表  -->
+<view class='playing-container'>
+  <view class='playing-item' wx:for='{{playingFilms}}' wx:key='{{index}}'>
+    <navigator url="/pages/film/detail?id={{item.id}}">
+      <image class="film-image" src='{{item.cover.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
+      <view class='info-container'>
+        <view>
+          <view class='name'>{{item.name}}</view>
+          <view class='total'>{{item.cinemaCount}}家影院上映 {{item.watchCount}}人购票</view>
+        </view>
+        <view class='grade'>
+          <text>{{item.grade}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <navigator url="/pages/film/list?type=playing">
+    <view class='more'>更多热映电影</view>
+  </navigator>
+
+</view>
+<!-- 分割线  -->
+<view class='split-line'>
+  <view class="split-text">即将上映</view>
+</view>
+<!-- 即将上映电影  -->
+<view class='coming-container'>
+  <view class='playing-item' wx:for='{{comingFilms}}' wx:key='{{index}}'>
+    <navigator url="/pages/film/detail?id={{item.id}}" hover-class="navigator-hover">
+      <image class="film-image" src='{{item.cover.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
+      <view class='info-container'>
+        <view>
+          <view class='name'>{{item.name}}</view>
+        </view>
+        <view class='time'>
+          <text>{{item.displayDate}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <navigator url="/pages/film/list?type=coming" hover-class="navigator-hover">
+    <view class='more'>更多即将上映电影</view>
+  </navigator>
+</view>
