@@ -9,7 +9,7 @@
 <!-- 热映电影列表  -->
 <view class='playing-container'>
   <view class='playing-item' wx:for='{{playingFilms}}' wx:key='{{index}}'>
-    <navigator url="/pages/film/detail?id={{item.id}}">
+    <navigator url="/pages/film/detail?id={{item.id}}&origin={{item.cover.origin}}">
       <image class="film-image" src='{{item.cover.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
       <view class='info-container'>
         <view>

@@ -16,6 +16,7 @@ Page({
    */
   onLoad(options) {
     this.getDetail(options.id);
+    this.options = options;
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
@@ -27,6 +28,7 @@ Page({
     filmServer.getFilmDetail(id).then((data) => {
       const premiereAt = `${new Date(data.film.premiereAt).getMonth() + 1}月${new Date(data.film.premiereAt).getDate()}日`;
       data.film.displayPremiereAt = premiereAt;
+      this.options.origin && (data.film.cover.origin = this.options.origin);
       this.setData({ film: data.film });
     });
   },
