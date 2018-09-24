@@ -10,11 +10,9 @@
     "verbose": true,
     "collectCoverage": true,
     "coveragePathIgnorePatterns": [
-      "./test/mock/wx.js",
-      "./test/utils.js"
+      "./__test__/"
     ],
     "testEnvironment": "node",
-    "automock": false,
     "setupFiles": ["./__test__/wx.js"]
   },
   "repository": {
