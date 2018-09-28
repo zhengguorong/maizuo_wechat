@@ -17,7 +17,7 @@ module.exports = {
     afterAll: true
   },
   rules: {
-    "indent": [0, 2], // 4个空格作为代码缩进
+    "indent": [0, 2], // 2个空格作为代码缩进
     "no-underscore-dangle": 0, // 允许使用下划线定义变量或方法，例如 _name
     "class-methods-use-this": 0, // 允许如果方法内没有用到this，不需强制定义成静态方法。
     "no-unused-expressions": [0, { "allowShortCircuit": true }], // 允许使用表达式

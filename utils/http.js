@@ -1,3 +1,21 @@
+/**
+ * 构造get请求参数
+ * url 请求地址
+ * data 请求数据
+ */
+function buildUrl(url, data) {
+  let params = '';
+  const baseUrl = getApp().baseUrl;
+  const requestUrl = baseUrl + url;
+  if (!data) {
+    return requestUrl;
+  }
+  for (const key in data) {
+    params += `${key}=${data[key]}&`;
+  }
+  params = `?${params.substring(0, params.length - 1)}`;
+  return requestUrl + params;
+}
 function get(url, data) {
   const requestUrl = buildUrl(url, data);
   return new Promise((resolve, reject) => {
@@ -50,34 +68,13 @@ function uploadFile(filePath) {
       filePath,
       name: 'file',
       success: (res) => {
-        const data = res.data;
-        resolve(data);
+        resolve(res.data);
       },
       fail: (res) => {
         reject(res);
       },
     });
   });
-}
-
-
-/**
- * 构造get请求参数
- * url 请求地址
- * data 请求数据
- */
-function buildUrl(url, data) {
-  let params = '';
-  const baseUrl = getApp().baseUrl;
-  const requestUrl = baseUrl + url;
-  if (!data) {
-    return requestUrl;
-  }
-  for (const key in data) {
-    params += `${key}=${data[key]}&`;
-  }
-  params = `?${params.substring(0, params.length - 1)}`;
-  return requestUrl + params;
 }
 
 module.exports = {

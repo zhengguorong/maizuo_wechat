@@ -1,17 +1,15 @@
-var http = require("../utils/http.js")
+const http = require('../utils/http.js');
 
-const getHomeBanner = () => {
-  return new Promise((resolve, reject) => {
-    http.get('/billboard/home', { __t: new Date().getTime()}).then(result => {
+const getHomeBanner = () => new Promise((resolve, reject) => {
+    http.get('/billboard/home', { __t: new Date().getTime() }).then((result) => {
       if (result.status === 0) {
-        resolve(result.data)
+        resolve(result.data);
       } else {
-        reject(result)
+        reject(result);
       }
-    })
-  })
-}
+    });
+  });
 
 module.exports = {
-  getHomeBanner
-}
+  getHomeBanner,
+};
