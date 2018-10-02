@@ -10,8 +10,6 @@ describe('电影首页', () => {
       jest.spyOn(page, 'getBanner');
       jest.spyOn(page, 'getPlayingFilm');
       jest.spyOn(page, 'getComingFilm');
-    });
-    beforeEach(() => {
       page.onLoad();
     });
     it('should getBanner', () => {
