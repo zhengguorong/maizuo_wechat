@@ -5,40 +5,19 @@
  */
 function buildUrl(url, data) {
   let params = '';
-  const baseUrl = getApp().baseUrl;
+  const { baseUrl } = getApp();
   const requestUrl = baseUrl + url;
   if (!data) {
     return requestUrl;
   }
-  for (const key in data) {
+  for (const key of Object.keys(data)) {
     params += `${key}=${data[key]}&`;
   }
   params = `?${params.substring(0, params.length - 1)}`;
   return requestUrl + params;
 }
-function get(url, data) {
-  const requestUrl = buildUrl(url, data);
-  return new Promise((resolve, reject) => {
-    wx.showLoading({ title: '加载中' });
-    wx.request({
-      url: requestUrl,
-      header: {
-        'content-type': 'application/json',
-      },
-      method: 'GET',
-      success: (res) => {
-        wx.hideLoading();
-        resolve(res.data);
-      },
-      fail: (res) => {
-        wx.hideLoading();
-        reject(res);
-      },
-    });
-  });
-}
 
-function post(url, data) {
+function _request(url, data, method = 'GET') {
   const requestUrl = buildUrl(url);
   return new Promise((resolve, reject) => {
     wx.showLoading({ title: '加载中' });
@@ -48,10 +27,10 @@ function post(url, data) {
         'content-type': 'application/json',
       },
       data,
-      method: 'POST',
+      method,
       success: (res) => {
         wx.hideLoading();
-        resolve(res);
+        resolve(res.data);
       },
       fail: (res) => {
         wx.hideLoading();
@@ -61,25 +40,17 @@ function post(url, data) {
   });
 }
 
-function uploadFile(filePath) {
-  return new Promise((resolve, reject) => {
-    wx.uploadFile({
-      url: buildUrl('/file/upload'),
-      filePath,
-      name: 'file',
-      success: (res) => {
-        resolve(res.data);
-      },
-      fail: (res) => {
-        reject(res);
-      },
-    });
-  });
+function get(url, data) {
+  return _request(url, data, 'GET');
+}
+
+function post(url, data) {
+  return _request(url, data, 'POST');
 }
 
 module.exports = {
   get,
   post,
-  uploadFile,
   buildUrl,
+  _request,
 };

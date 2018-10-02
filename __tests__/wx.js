@@ -1,9 +1,6 @@
 export const noop = () => {};
 export const isFn = fn => typeof fn === 'function';
 let wId = 0;
-/**
- * 对于小程序中 Page 的简单 Mock
- */
 global.Page = ({ data, ...rest }) => {
   const page = {
     data,
@@ -21,10 +18,7 @@ global.Page = ({ data, ...rest }) => {
     __wxWebviewId__: wId++,
     ...rest,
   };
-
-  page.onLoad();
-  page.onReady();
-  global.wxPage = page;
+  global.wxPageInstance = page;
   return page;
 };
 
@@ -33,7 +27,12 @@ global.getApp = function () {
     baseUrl: 'https://m.maizuo.com/v4/api',
   };
 };
-
+global.Date.now = jest.fn(() => 1536708613825);
 global.wx = {
+  showLoading: jest.fn(),
+  hideLoading: jest.fn(),
   showModal: jest.fn(),
+  request: jest.fn(),
+  getStorageSync: jest.fn(),
+  showShareMenu: jest.fn(),
 };

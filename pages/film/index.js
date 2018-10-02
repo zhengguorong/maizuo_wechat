@@ -39,7 +39,7 @@ Page({
   },
   // 获取即将上映电影列表
   getComingFilm() {
-    filmServer.getComingSoon(1, 5).then((data) => {
+    return filmServer.getComingSoon(1, 5).then((data) => {
       data.films.forEach((film) => {
         const displayDate = `${new Date(film.premiereAt).getMonth() + 1}月${new Date(film.premiereAt).getDate()}日`;
         film.displayDate = displayDate;

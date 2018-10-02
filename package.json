@@ -10,10 +10,13 @@
     "verbose": true,
     "collectCoverage": true,
     "coveragePathIgnorePatterns": [
-      "./__test__/"
+      "./__tests__/wx.js"
+    ],
+    "testPathIgnorePatterns": [
+      "./__tests__/wx.js"
     ],
     "testEnvironment": "node",
-    "setupFiles": ["./__test__/wx.js"]
+    "setupFiles": ["./__tests__/wx.js"]
   },
   "repository": {
     "type": "git",
