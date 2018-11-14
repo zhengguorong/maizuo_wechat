@@ -1,3 +1,4 @@
+<view>
 <!-- banner广告  -->
 <swiper class='banner' autoplay="{{true}}" indicator-dots="true">
   <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
@@ -8,7 +9,7 @@
 </swiper>
 <!-- 热映电影列表  -->
 <view class='playing-container'>
-  <view class='playing-item' wx:for='{{playingFilms}}' wx:key='{{index}}'>
+  <view class='playing-item' wx:for='{{playingFilms}}' wx:key='{{index}}' data-test='{{item.id}}'>
     <navigator url="/pages/film/detail?id={{item.id}}&origin={{item.cover.origin}}">
       <image class="film-image" src='{{item.cover.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
       <view class='info-container'>
@@ -50,3 +51,5 @@
     <view class='more'>更多即将上映电影</view>
   </navigator>
 </view>
+</view>
+<c-track pageMethods="{{pageMethods}}" pageData="{{pageData}}" route="{{route}}"></c-track>

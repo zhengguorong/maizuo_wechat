@@ -1,6 +1,6 @@
 {
   "backgroundColor": "#ebebeb",
   "usingComponents": {
-    "Toast": "/components/Toast"
+    "c-track": "/components/Track/index"
   }
 }

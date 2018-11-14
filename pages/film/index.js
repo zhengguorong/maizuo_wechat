@@ -1,6 +1,7 @@
 const infoServer = require('../../server/info.js');
 const filmServer = require('../../server/film.js');
 
+
 // pages/index/index.js
 Page({
   /**
@@ -10,11 +11,25 @@ Page({
     imgUrls: [],
     playingFilms: [],
     comingFilms: [],
+    test: 'test',
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad() {
+    const pageMethods = [];
+    for (const key in this) {
+      if (typeof this[key] === 'function') {
+        pageMethods.push(key);
+      }
+    }
+    const pageData = [];
+    for (const key in this.data) {
+      if (key !== '__webviewId__') {
+        pageData.push(key);
+      }
+    }
+    this.setData({ pageMethods, pageData, route: this.route });
     this.getBanner();
     this.getPlayingFilm();
     this.getComingFilm();
@@ -27,7 +42,7 @@ Page({
   },
   // 获取滚动广告
   getBanner() {
-    infoServer.getHomeBanner().then((data) => {
+    return infoServer.getHomeBanner().then((data) => {
       this.setData({ imgUrls: data.billboards });
     });
   },

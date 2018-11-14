@@ -1,0 +1,23 @@
+.entry {
+    position: fixed;
+    bottom: 20rpx;
+    right: 20rpx;
+    background: green;
+    color: #fff;
+    padding: 20rpx;
+}
+.container {
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    right: 0px;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    background: #fff;
+    overflow: scroll;
+}
+.data {
+    color: #ccc;
+    padding-left: 20rpx;
+}
