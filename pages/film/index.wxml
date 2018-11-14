@@ -1,4 +1,5 @@
 <!-- banner广告  -->
+<view catchtap='catchPageTap'>
 <swiper class='banner' autoplay="{{true}}" indicator-dots="true">
   <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
     <swiper-item bindtap="toBannerDetail">
@@ -49,4 +50,5 @@
   <navigator url="/pages/film/list?type=coming" hover-class="navigator-hover">
     <view class='more'>更多即将上映电影</view>
   </navigator>
+</view>
 </view>
