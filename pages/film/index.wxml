@@ -1,5 +1,6 @@
 <view>
 <!-- banner广告  -->
+<view catchtap='catchPageTap'>
 <swiper class='banner' autoplay="{{true}}" indicator-dots="true">
   <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
     <swiper-item bindtap="toBannerDetail">
@@ -26,6 +27,8 @@
   <navigator url="/pages/film/list?type=playing">
     <view class='more'>更多热映电影</view>
   </navigator>
+  
+  <view class="testTrack">这是一个测试点击元素</view>
 
 </view>
 <!-- 分割线  -->
@@ -50,6 +53,7 @@
   <navigator url="/pages/film/list?type=coming" hover-class="navigator-hover">
     <view class='more'>更多即将上映电影</view>
   </navigator>
+</view>
 </view>
 </view>
 <c-track pageMethods="{{pageMethods}}" pageData="{{pageData}}" route="{{route}}"></c-track>
