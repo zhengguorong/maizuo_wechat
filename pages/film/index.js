@@ -1,20 +1,6 @@
 const infoServer = require('../../server/info.js');
 const filmServer = require('../../server/film.js');
 
-const pageTrack = [
-  {
-    element: '.playing-item',
-    datas: ['imgUrls', 'playingFilms'],
-  },
-  {
-    element: '.more',
-    datas: ['imgUrls', 'playingFilms'],
-  },
-  {
-    element: '.testTrack',
-    datas: ['imgUrls', 'playingFilms'],
-  },
-];
 // pages/index/index.js
 Page({
   /**
@@ -46,26 +32,6 @@ Page({
     this.getBanner();
     this.getPlayingFilm();
     this.getComingFilm();
-  },
-  catchPageTap(e) {
-    const { x, y } = e.detail; // 点击的x y坐标
-    console.log(x, y);
-    pageTrack.forEach((track) => {
-      const query = wx.createSelectorQuery();
-      const elementName = track.element;
-      query.select(elementName).boundingClientRect();
-      query.selectViewport().scrollOffset();
-      query.exec((res) => {
-        const { left, right, top, height } = res[0];
-        const { scrollTop } = res[1];
-        if (left < x && x < right && scrollTop + Math.abs(top) < y && y < scrollTop + Math.abs(top) + height) {
-          console.log(`被点击元素className:${track.element}`);
-          track.datas.forEach((name) => {
-            console.log(`被记录数据key:${name}, value: ${JSON.stringify(this.data[name])}`);
-          });
-        }
-      });
-    });
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
