@@ -1,13 +1,7 @@
-const http = require('../utils/http.js');
+import mockResponse from './mockResponse';
 
 const getHomeBanner = () => new Promise((resolve, reject) => {
-    http.get('/billboard/home', { __t: new Date().getTime() }).then((result) => {
-      if (result.status === 0) {
-        resolve(result.data);
-      } else {
-        reject(result);
-      }
-    });
+    resolve(mockResponse.banner.data);
   });
 
 module.exports = {

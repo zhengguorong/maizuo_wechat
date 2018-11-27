@@ -4,15 +4,15 @@
 <swiper class='banner' autoplay="{{true}}" indicator-dots="true">
   <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
     <swiper-item bindtap="toBannerDetail">
-      <image src='{{item.imageUrl}}' class='slide-image' />
+      <image src='{{item.imgUrl}}' class='slide-image' />
     </swiper-item>
   </block>
 </swiper>
 <!-- 热映电影列表  -->
 <view class='playing-container'>
-  <view class='playing-item' wx:for='{{playingFilms}}' wx:key='{{index}}' data-test='{{item.id}}'>
-    <navigator url="/pages/film/detail?id={{item.id}}&origin={{item.cover.origin}}">
-      <image class="film-image" src='{{item.cover.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
+  <view class='playing-item' wx:for='{{playingFilms}}' wx:key='{{index}}'>
+    <navigator url="/pages/film/detail?id={{item.filmId}}&origin={{item.cover.origin}}">
+      <image class="film-image" mode="aspectFill" src='{{item.poster || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
       <view class='info-container'>
         <view>
           <view class='name'>{{item.name}}</view>
@@ -29,6 +29,7 @@
   </navigator>
   
   <view class="testTrack">这是一个测试点击元素</view>
+  <view bindtap="resetData">resetData</view>
 
 </view>
 <!-- 分割线  -->
@@ -38,8 +39,8 @@
 <!-- 即将上映电影  -->
 <view class='coming-container'>
   <view class='playing-item' wx:for='{{comingFilms}}' wx:key='{{index}}'>
-    <navigator url="/pages/film/detail?id={{item.id}}" hover-class="navigator-hover">
-      <image class="film-image" src='{{item.cover.origin || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
+    <navigator url="/pages/film/detail?id={{item.filmId}}" hover-class="navigator-hover">
+      <image class="film-image" mode="aspectFill" src='{{item.poster || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
       <view class='info-container'>
         <view>
           <view class='name'>{{item.name}}</view>

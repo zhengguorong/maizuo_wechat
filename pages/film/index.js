@@ -42,7 +42,7 @@ Page({
   // 获取滚动广告
   getBanner() {
     return infoServer.getHomeBanner().then((data) => {
-      this.setData({ imgUrls: data.billboards });
+      this.setData({ imgUrls: data });
     });
   },
   // 获取正在热映电影列表
@@ -59,8 +59,33 @@ Page({
         film.displayDate = displayDate;
       });
       this.setData({ comingFilms: data.films });
+      // const newArray = this.copyArray(10, data.films);
+      // for (let i = 0; i < 100; i++) {
+      //   const startTime = Date.now();
+      //   this.setData({ comingFilms: newArray }, () => {
+      //     console.log(Date.now() - startTime, 'durTime');
+      //   });
+      // }
+
     });
   },
+  resetData() {
+    // const newArray = this.copyArray(2, this.data.comingFilms);
+    const originObj = this.data.comingFilms;
+    originObj[0].id = 233333;
+    const startTime = Date.now();
+    this.setData({ comingFilms: originObj }, () => {
+      console.log(Date.now() - startTime, 'durTime');
+    });
+  },
+  copyArray(count, originArray) {
+    const newArray = [];
+    for (let i = 0; i < count; i++) {
+      originArray.forEach(item => newArray.push(item));
+    }
+    return newArray;
+  },
+
   toBannerDetail() {
     wx.showModal({
       title: '提示',

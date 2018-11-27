@@ -1,4 +1,4 @@
-<image class="film-image" src='{{film.cover.origin}}'></image>
+<image class="film-image" src='{{film.poster}}'></image>
 <view class='info-container'>
   <view class="title">影片简介</view>
   <view class="info">

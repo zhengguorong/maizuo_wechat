@@ -5,5 +5,5 @@ xbossdebug.config.key = 'maizuo';
 xbossdebug.config.url = 'https://xbossdebug.com/';
 
 App({
-    baseUrl: 'https://m.maizuo.com/v4/api',
+    baseUrl: 'https://m.maizuo.com/',
 });
