@@ -8,6 +8,7 @@
     </swiper-item>
   </block>
 </swiper>
+
 <!-- 热映电影列表  -->
 <view class='playing-container'>
   <view class='playing-item' wx:for='{{playingFilms}}' wx:key='{{index}}'>
@@ -27,9 +28,6 @@
   <navigator url="/pages/film/list?type=playing">
     <view class='more'>更多热映电影</view>
   </navigator>
-  
-  <view class="testTrack">这是一个测试点击元素</view>
-  <view bindtap="resetData">resetData</view>
 
 </view>
 <!-- 分割线  -->
@@ -57,4 +55,3 @@
 </view>
 </view>
 </view>
-<c-track pageMethods="{{pageMethods}}" pageData="{{pageData}}" route="{{route}}"></c-track>
