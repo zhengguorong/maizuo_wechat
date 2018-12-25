@@ -29,6 +29,8 @@ module.exports = {
     "no-restricted-syntax": 0,
     "no-prototype-builtins":0,
     "func-names":0,
-    "prefer-rest-params":0
+    "prefer-rest-params":0,
+    "arrow-parens": 0,
+    "comma-dangle":0
   }
 };

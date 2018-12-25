@@ -3,13 +3,12 @@ const Animation = require('../../utils/animation');
 
 // pages/film/detail.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     film: {},
-    scaleAnim: {},
+    scaleAnim: {}
   },
   /**
    * 生命周期函数--监听页面加载
@@ -25,8 +24,9 @@ Page({
     this.onLoad();
   },
   getDetail(id) {
-    filmServer.getFilmDetail(id).then((data) => {
-      const premiereAt = `${new Date(data.film.premiereAt).getMonth() + 1}月${new Date(data.film.premiereAt).getDate()}日`;
+    filmServer.getFilmDetail(id).then(data => {
+      const premiereAt = `${new Date(data.film.premiereAt).getMonth() +
+        1}月${new Date(data.film.premiereAt).getDate()}日`;
       data.film.displayPremiereAt = premiereAt;
       this.options.origin && (data.film.cover.origin = this.options.origin);
       this.setData({ film: data.film });
@@ -35,11 +35,11 @@ Page({
   buy() {
     const scaleAnim = Animation.scaleAnim();
     this.setData({
-      scaleAnim: scaleAnim.export(),
+      scaleAnim: scaleAnim.export()
     });
     wx.showModal({
       title: '提示',
-      content: '购买功能还没开发',
+      content: '购买功能还没开发'
     });
-  },
+  }
 });
