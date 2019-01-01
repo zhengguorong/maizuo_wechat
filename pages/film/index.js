@@ -1,8 +1,9 @@
 const infoServer = require("../../server/info.js");
 const filmServer = require("../../server/film.js");
+import { createPage } from '../../libs/xbossTrack/xboss';
 
 // pages/index/index.js
-Page({
+createPage({
     /**
      * 页面的初始数据
      */
