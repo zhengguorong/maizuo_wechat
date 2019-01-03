@@ -1,6 +1,6 @@
 const infoServer = require("../../server/info.js");
 const filmServer = require("../../server/film.js");
-import { createPage } from '../../libs/xbossTrack/xboss';
+import { createPage } from '../../libs/xbossTrack/wrapper';
 
 // pages/index/index.js
 createPage({

@@ -1,6 +1,6 @@
 // pages/film/list.js
 const filmServer = require('../../server/film.js');
-import { createPage } from '../../libs/xbossTrack/xboss';
+import { createPage } from '../../libs/xbossTrack/wrapper';
 
 createPage({
 

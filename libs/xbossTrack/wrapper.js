@@ -52,7 +52,6 @@ const _addExtraMethod = (target, methods) => {
   });
 };
 
-
 /**
  * @param {*} target page对象或者app对象
  * @param {*} methods 需要插入执行的函数

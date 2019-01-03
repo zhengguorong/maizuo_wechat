@@ -1,8 +1,5 @@
-// const xbossdebug = require('./libs/xbossdebug.js');
-const { addPageMethodWrapper, addAppMethodWrapper, createApp } = require('./libs/xbossTrack/xboss');
-require('./libs/xbossTrack/track');
-// xbossdebug.config.key = 'maizuo';
-// xbossdebug.config.url = 'https://xbossdebug.com/';
+const { createApp } = require('./libs/xbossTrack/wrapper');
+require('./libs/xbossTrack/index');
 
 createApp({
   baseUrl: 'https://m.maizuo.com/',
