@@ -1,6 +1,6 @@
 <view>
 <!-- banner广告  -->
-<view catchtap='pageAutoTrack'>
+<view catchtap='elementTracker'>
 <swiper class='banner' autoplay="{{true}}" indicator-dots="true">
   <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
     <swiper-item bindtap="toBannerDetail">
