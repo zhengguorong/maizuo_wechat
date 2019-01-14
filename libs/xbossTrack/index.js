@@ -18,8 +18,12 @@ class Tracker {
       const tracks = this.findActivePageTracks('element');
       tracks.forEach((track) => {
           getBoundingClientRect(track.element).then((res) => {
-              const isHit = isClickTrackArea(e, res.boundingClientRect, res.scrollOffset);
-              isHit && report(track);
+              res.boundingClientRect.forEach((item, index) => {
+                const isHit = isClickTrackArea(e, item, res.scrollOffset);
+                track.dataset = item.dataset;
+                track.index = index;
+                isHit && report(track);
+              });
           });
       });
     };

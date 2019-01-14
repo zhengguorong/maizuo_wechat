@@ -10,7 +10,10 @@ createPage({
     data: {
         imgUrls: [],
         playingFilms: [],
-        comingFilms: []
+        comingFilms: [],
+        test: {
+            name: 'zgr'
+        }
     },
     /**
      * 生命周期函数--监听页面加载

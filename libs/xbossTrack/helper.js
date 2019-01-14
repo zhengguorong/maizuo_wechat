@@ -6,7 +6,7 @@
 export const getBoundingClientRect = function (element) {
     return new Promise((reslove) => {
         const query = wx.createSelectorQuery();
-        query.select(element).boundingClientRect();
+        query.selectAll(element).boundingClientRect();
         query.selectViewport().scrollOffset();
         query.exec(res => reslove({ boundingClientRect: res[0], scrollOffset: res[1] }));
     });
@@ -23,7 +23,7 @@ export const isClickTrackArea = function (clickInfo, boundingClientRect, scrollO
     const { x, y } = clickInfo.detail; // 点击的x y坐标
     const { left, right, top, height } = boundingClientRect;
     const { scrollTop } = scrollOffset;
-    if (left < x && x < right && scrollTop + Math.abs(top) < y && y < scrollTop + Math.abs(top) + height) {
+    if (left < x && x < right && scrollTop + top < y && y < scrollTop + top + height) {
         return true;
     }
     return false;
