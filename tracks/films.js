@@ -3,7 +3,7 @@ const tracks = {
   elementTracks: [
     {
       element: '.playing-item',
-      dataKeys: ['imgUrls', 'playingFilms[0]', 'test.name', '$APP.baseUrl', '$DATASET.test'],
+      dataKeys: ['imgUrls', 'playingFilms[$INDEX].filmId', 'playingFilms[0]', 'test.name', '$APP.baseUrl', '$DATASET.test', '$INDEX'],
     },
     {
       element: '.more',
@@ -11,14 +11,14 @@ const tracks = {
     }
   ],
   methodTracks: [
-    // {
-    //   method: 'getBanner',
-    //   dataKeys: ['imgUrls'],
-    // },
-    // {
-    //   method: 'toBannerDetail',
-    //   dataKeys: ['imgUrls'],
-    // },
+    {
+      method: 'getBanner',
+      dataKeys: ['imgUrls'],
+    },
+    {
+      method: 'toBannerDetail',
+      dataKeys: ['imgUrls'],
+    },
   ],
 };
 

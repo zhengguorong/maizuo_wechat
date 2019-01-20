@@ -82,3 +82,7 @@ export const addAppMethodExtra = (fn) => {
 
 export const createApp = (app) => globalVarApp(_create(app, injectAppMethods, extraAppMethods));
 export const createPage = (page) => globalVarPage(_create(page, injectPageMethods, extraPageMethods));
+export const init = () => {
+  App = (app) => globalVarApp(_create(app, injectAppMethods, extraAppMethods));
+  Page = (page) => globalVarPage(_create(page, injectPageMethods, extraPageMethods));
+};
