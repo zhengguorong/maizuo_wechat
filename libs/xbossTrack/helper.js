@@ -40,3 +40,7 @@ export const getActivePage = function () {
     }
     return {};
 };
+
+export const _isPromise = function (value) {
+    return value && Object.prototype.toString.call(value) === '[object Promise]';
+};

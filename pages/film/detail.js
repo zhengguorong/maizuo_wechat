@@ -1,9 +1,8 @@
 const filmServer = require('../../server/film.js');
 const Animation = require('../../utils/animation');
-import { createPage } from '../../libs/xbossTrack/wrapper';
 
 // pages/film/detail.js
-createPage({
+Page({
   /**
    * 页面的初始数据
    */
