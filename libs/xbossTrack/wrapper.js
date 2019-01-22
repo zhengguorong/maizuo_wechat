@@ -88,11 +88,11 @@ class Wrapper {
     this.extraAppMethods.push(fn);
   }
 
-  static createApp(app) {
+  createApp(app) {
     globalVarApp(this._create(app, this.injectAppMethods, this.extraAppMethods));
   }
 
-  static createPage(page) {
+  createPage(page) {
     globalVarPage(this._create(page, this.injectPageMethods, this.extraPageMethods));
   }
 }

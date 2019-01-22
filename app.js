@@ -1,9 +1,10 @@
 import Tracker from './libs/xbossTrack/index';
 import trackConfig from './tracks/index';
 
-new Tracker({ tracks: trackConfig });
+const trakcer = new Tracker({ tracks: trackConfig, isUsingPlugin: true });
 
 
-App({
+trakcer.createApp({
   baseUrl: 'https://m.maizuo.com/',
+  trakcer,
 });
