@@ -1,9 +1,8 @@
 const filmServer = require('../../server/film.js');
 const Animation = require('../../utils/animation');
 
-const { trakcer } = getApp();
 // pages/film/detail.js
-trakcer.createPage({
+Page({
   /**
    * 页面的初始数据
    */
