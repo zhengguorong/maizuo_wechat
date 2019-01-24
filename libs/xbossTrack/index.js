@@ -17,12 +17,13 @@ class Tracker extends Wrapper {
     // elementTracker变量名尽量不要修改，因为他和wxml下的名字是相对应的
     const elementTracker = (e) => {
       const tracks = this.findActivePageTracks('element');
+      const { data } = getActivePage();
       tracks.forEach((track) => {
           getBoundingClientRect(track.element).then((res) => {
               res.boundingClientRect.forEach((item) => {
                 const isHit = isClickTrackArea(e, item, res.scrollOffset);
                 track.dataset = item.dataset;
-                isHit && report(track);
+                isHit && report(track, data);
               });
           });
       });
@@ -33,9 +34,10 @@ class Tracker extends Wrapper {
   methodTracker() {
     return (page, methodName) => {
       const tracks = this.findActivePageTracks('method');
+      const { data } = getActivePage();
       tracks.forEach((track) => {
         if (track.method === methodName) {
-          report(track);
+          report(track, data);
         }
       });
     };
