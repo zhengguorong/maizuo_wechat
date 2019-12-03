@@ -32,11 +32,13 @@ class Tracker extends Wrapper {
   }
 
   methodTracker() {
-    return (page, methodName) => {
+    return (page, methodName, args = {}) => {
       const tracks = this.findActivePageTracks('method');
       const { data } = getActivePage();
+      const { dataset } = args.currentTarget || {};
       tracks.forEach((track) => {
         if (track.method === methodName) {
+          track.dataset = dataset;
           report(track, data);
         }
       });

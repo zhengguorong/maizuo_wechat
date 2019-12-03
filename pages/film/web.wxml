@@ -1,0 +1,2 @@
+<!--pages/film/web.wxml-->
+<web-view src="{{src}}"></web-view>

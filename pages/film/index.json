@@ -1,6 +1,6 @@
 {
   "backgroundColor": "#ebebeb",
   "usingComponents": {
-    "c-track": "/components/Track/index"
+    "c-track-btn": "/components/TrackBtn"
   }
 }

@@ -4,7 +4,8 @@
     "pages/film/detail",
     "pages/film/list",
     "pages/member/index",
-    "pages/cinema/index"
+    "pages/cinema/index",
+    "pages/film/web"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,5 +36,6 @@
         "selectedIconPath": "img/member_selected.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,14 +1,14 @@
-<view>
+<view class="page">
 <!-- banner广告  -->
 <view catchtap='elementTracker'>
 <swiper class='banner' autoplay="{{true}}" indicator-dots="true">
   <block wx:for='{{imgUrls}}' wx:key='{{index}}'>
-    <swiper-item bindtap="toBannerDetail">
+    <swiper-item bindtap="toBannerDetail" data-test="test">
       <image src='{{item.imgUrl}}' class='slide-image' />
     </swiper-item>
   </block>
 </swiper>
-
+<c-track-btn></c-track-btn>
 <!-- 热映电影列表  -->
 <view class='playing-container'>
   <view class='playing-item' data-index="{{index}}" data-test='ttes' wx:for='{{playingFilms}}' wx:key='{{index}}'>
