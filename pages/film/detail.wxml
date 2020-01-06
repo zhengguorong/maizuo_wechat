@@ -8,7 +8,7 @@
     </view>
     <view class="info">
       <text>主演：</text>
-      <text wx:for="{{film.actors}}" wx:key="{{index}}">{{item.name}} |</text>
+      <text wx:for="{{film.actors}}" wx:key="name">{{item.name}} |</text>
     </view>
     <view class="info">
       <text>地区语言：</text>
