@@ -24,6 +24,12 @@ const tracks = {
       dataKeys: ['imgUrls', '$DATASET.test'],
     },
   ],
+  comMethodTracks: [
+    {
+      method: '_test1',
+      dataKeys: ['name', '$DATASET.test'],
+    },
+  ],
 };
 
 export default tracks;
