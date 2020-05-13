@@ -19,6 +19,9 @@ Component({
    */
   methods: {
     _test1: function () {
+      this.setData({
+        name:'good zheng'
+      })
       console.log('com method test');
     }
   }
