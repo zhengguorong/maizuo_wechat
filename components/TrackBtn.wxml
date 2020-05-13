@@ -1,1 +1,1 @@
-<view class="sub-component" data-test="testValue">组件埋点测试</view>
+<view class="sub-component" catchtap="_test1" data-test="testValue">组件埋点测试</view>

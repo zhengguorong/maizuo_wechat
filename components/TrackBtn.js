@@ -4,7 +4,7 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    
+
   },
 
   /**
@@ -18,6 +18,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    _test1: function () {
+      this.setData({
+        name:'good zheng'
+      })
+      console.log('com method test');
+    }
   }
 })

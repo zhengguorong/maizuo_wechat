@@ -9,6 +9,7 @@ Page({
      */
     data: {
         imgUrls: [],
+        ceshi:'AAAAAAAA',
         playingFilms: [],
         comingFilms: [],
         test: {
@@ -32,7 +33,8 @@ Page({
     // 获取滚动广告
     getBanner() {
         return infoServer.getHomeBanner().then(data => {
-            this.setData({ imgUrls: data });
+            this.setData({ imgUrls: data,
+            ceshi:"AAAAAA" });
         });
     },
     // 获取正在热映电影列表
@@ -53,6 +55,7 @@ Page({
         });
     },
     toBannerDetail() {
+        // 
         wx.showModal({
             title: "提示",
             content: "因打开webview控件需要加入白名单，这里就不做跳转了"
