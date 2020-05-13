@@ -3,7 +3,7 @@
 <view catchtap='elementTracker'>
 <swiper class='banner' autoplay="{{true}}" indicator-dots="true">
   <block wx:for='{{imgUrls}}' wx:key='imgUrl'>
-    <swiper-item bindtap="toBannerDetail" data-test="test">
+    <swiper-item bindtap="toBannerDetail" data-test="test1">
       <image src='{{item.imgUrl}}' class='slide-image' />
     </swiper-item>
   </block>
@@ -11,7 +11,7 @@
 <c-track-btn></c-track-btn>
 <!-- 热映电影列表  -->
 <view class='playing-container'>
-  <view class='playing-item' data-index="{{index}}" data-test='ttes' wx:for='{{playingFilms}}' wx:key='name'>
+  <view class='playing-item' data-index="{{index}}" data-test='ttesCCCCCC' wx:for='{{playingFilms}}' wx:key='name'>
     <navigator url="/pages/film/detail?id={{item.filmId}}&origin={{item.cover.origin}}">
       <image class="film-image" mode="aspectFill" src='{{item.poster || "https://static.m.maizuo.com/v4/static/app/asset/3d2cdb3bd9a23609aa2d84e7c2bfd035.png"}}'></image>
       <view class='info-container'>
